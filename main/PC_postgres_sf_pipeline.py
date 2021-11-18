@@ -1,4 +1,7 @@
-from pyspark.sql import SparkSession
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SQLContext, SparkSession
+from pyspark.sql.types import *
+from pyspark import SparkConf, SparkContext
 
 spark = SparkSession \
     .builder \
@@ -16,11 +19,6 @@ df = spark.read \
     .load()
 
 df.printSchema()
-
-from pyspark import SparkConf, SparkContext
-from pyspark.sql import SQLContext
-from pyspark.sql.types import *
-from pyspark import SparkConf, SparkContext
 
 spark = SparkSession \
     .builder \
